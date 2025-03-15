@@ -22,8 +22,8 @@ jobs:
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          server: ftp.evolvix-uae.com  # Use your correct FTP hostname from Hostinger
-          username: ${{ secrets.FTP_USERNAME }}  # Using the secret you added
-          password: ${{ secrets.FTP_PASSWORD }}  # Using the secret you added
+          server: ftp://145.223.105.203  # Use the FTP IP from Hostinger
+          username: ${{ secrets.FTP_USERNAME }}  # Uses GitHub Secret
+          password: ${{ secrets.FTP_PASSWORD }}  # Uses GitHub Secret
           local-dir: build/
           server-dir: /public_html/
